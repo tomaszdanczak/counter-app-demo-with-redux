@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { increment } from "./../actions";
+import { increment, deleteCounter } from "./../actions";
 
 const Counter = (props) => {
   const dispatch = useDispatch();
@@ -17,7 +17,14 @@ const Counter = (props) => {
       >
         Increment
       </button>
-      <button className="btn btn-danger btn-sm m-2">Delete</button>
+      <button
+        onClick={() => {
+          dispatch(deleteCounter(id));
+        }}
+        className="btn btn-danger btn-sm m-2"
+      >
+        Delete
+      </button>
     </div>
   );
 };
