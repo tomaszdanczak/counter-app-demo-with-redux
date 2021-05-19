@@ -18,6 +18,18 @@ const counterReducer = (state = initialState, action) => {
       return { ...state, counters };
     }
 
+    case "INCREMENT": {
+      const counters = state.counters.map((c) => {
+        if (c.id === action.payload) {
+          c.value += 1;
+          return c;
+        }
+        return c;
+      });
+
+      return { ...state, counters };
+    }
+
     default:
       return state;
   }
