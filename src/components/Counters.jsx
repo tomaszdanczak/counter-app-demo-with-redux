@@ -9,7 +9,12 @@ const Counters = () => {
     <Counter key={counter.id} id={counter.id} value={counter.value} />
   ));
 
-  return <div>{countersToRender}</div>;
+  return (
+    <div>
+      <button className="btn btn-primary btn-sm m2">Reset</button>
+      {countersToRender}
+    </div>
+  );
 };
 
 export default Counters;
