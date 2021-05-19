@@ -1,5 +1,7 @@
+import Counters from "./components/Counters";
+
 function App() {
-  return <div>App</div>;
+  return <Counters />;
 }
 
 export default App;
