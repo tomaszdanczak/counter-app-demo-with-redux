@@ -30,6 +30,12 @@ const counterReducer = (state = initialState, action) => {
       return { ...state, counters };
     }
 
+    case "DELETE": {
+      const counters = state.counters.filter((c) => c.id !== action.payload);
+
+      return { ...state, counters };
+    }
+
     default:
       return state;
   }
