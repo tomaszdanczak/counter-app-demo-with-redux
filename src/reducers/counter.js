@@ -9,6 +9,15 @@ const initialState = {
 
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "RESET": {
+      const counters = state.counters.map((c) => {
+        c.value = 0;
+        return c;
+      });
+
+      return { ...state, counters };
+    }
+
     default:
       return state;
   }
