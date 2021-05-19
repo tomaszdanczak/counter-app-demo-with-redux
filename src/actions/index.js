@@ -10,3 +10,10 @@ export const increment = (id) => {
     payload: id,
   };
 };
+
+export const deleteCounter = (id) => {
+  return {
+    type: "DELETE",
+    payload: id,
+  };
+};
